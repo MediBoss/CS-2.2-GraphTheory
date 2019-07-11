@@ -1,3 +1,5 @@
+import sys
+
 class Graph(object):
     
     def __init__(self, type, vertices, edges, weighted=False):
@@ -10,13 +12,13 @@ class Graph(object):
 
         return "Graph of type {} with vertices {} and edges {}".format(self.type, self.vertices, self.edges)
     def num_of_vertices(self):
-        pass
+        return len(self.vertices)
 
     def num_of_edges(self):
-        pass
+        return len(self.edges)
 
     def edges_with_weights(self):
-        pass
+        return self.edges
 
 
 def read_file(file_name):
@@ -26,13 +28,15 @@ def read_file(file_name):
         text = opened_file.read()
         split_text = text.split("\n")
         
-        g = Graph(split_text[0], split_text[1].split(","), split_text[2:])
-        print(g)
+        graph = Graph(split_text[0], split_text[1].split(","), split_text[2:])
+
+    return graph
 
 
 def main():
     
-    read_file("test.txt")
+    graph = read_file("test.txt")
+
 
 if __name__ == "__main__":
     main()
