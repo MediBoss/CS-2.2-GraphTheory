@@ -25,7 +25,7 @@ def main():
     graph["D"] = ["F", "B"]
     graph["B"] = ["D", "A"]
 
-    print(dfs_recursive(graph, "A"))
+    print(dfs_recursive(graph, "E"))
 
 if __name__ == "__main__":
     main()
