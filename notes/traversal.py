@@ -45,10 +45,10 @@ def main():
     graph["D"] = ["F", "B"]
     graph["B"] = ["D", "A"]
 
-    #dfs(graph, "A")
-    origin = "A"
-    destination = "F"
-    #print("Is there path from {} to {} : ".format(origin, destination), find_path(graph, origin, destination))
-    find_path(graph, origin, destination)
+    dfs(graph, "A")
+    # origin = "A"
+    # destination = "F"
+    # #print("Is there path from {} to {} : ".format(origin, destination), find_path(graph, origin, destination))
+    # find_path(graph, origin, destination)
 if __name__ == "__main__":
     main()
