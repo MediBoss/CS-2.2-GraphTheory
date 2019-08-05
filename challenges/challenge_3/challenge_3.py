@@ -1,6 +1,10 @@
-from challenge_1 import Graph
-from challenge_1 import read_file
 import heapq
+import sys
+sys.path.insert(1, '/Users/mediassumani/Documents/dev/cs/Courses/CS-2.2-GraphTheory/challenges')
+import graph
+
+# from challenges import Graph
+# from challenge_1 import read_file
 
 def depth_first_search(graph, origin, destination, visited=None):
     """DFS to determine if there is a path between two vertices in a weighted directed graph
@@ -22,7 +26,7 @@ def depth_first_search(graph, origin, destination, visited=None):
                 
     return False
 
-def find_shortest_path(graph, source): # Code extracted from Interview Cacke
+def find_shortest_path(graph, source):
     
     # Set the initial distance to the source to 0 and all to infinity
     weight_to_get_to = { node : float('inf') for node in graph }
@@ -58,9 +62,7 @@ def find_shortest_path(graph, source): # Code extracted from Interview Cacke
                 heapq.heapreplace(priority_queue, (weight_to_get_to[neighbor], neighbor))
 
     return weight_to_get_to
-
-
-
+    
 def main():
     
     graph = {}
